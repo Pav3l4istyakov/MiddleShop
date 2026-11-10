@@ -6,7 +6,22 @@ void Start()
 	{
 		if (Login())
 		{
-			system("pause");
+			if (currentStatus == L"SuperAdmin")
+			{
+
+			}
+			else if (currentStatus == L"Admin")
+			{
+
+			}
+			else if (currentStatus == L"User")
+			{
+
+			}
+			else
+			{
+				std::wcerr << L"\n\n_CURRENT_STATUS-LOGIN-ERROR\n\n";
+			}
 		}
 		else
 		{
