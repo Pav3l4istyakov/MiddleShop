@@ -1,9 +1,10 @@
 #ifndef AUTHORIZATION_HPP
 #define AUTHORIZATION_HPP
 
-#include <iostream>
-#include <string>
+#include "ServiceFunctions.hpp"
+#include "Accounts.hpp"
 
 void Start();
+bool Login();
 
-#endif // AUTHORIZATION_HP
+#endif // AUTHORIZATION_HPP

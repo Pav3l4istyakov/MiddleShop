@@ -140,11 +140,17 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Accounts.cpp" />
     <ClCompile Include="Authorization.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ServiceFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Accounts.hpp" />
     <ClInclude Include="Authorization.hpp" />
+    <ClInclude Include="Sellings.hpp" />
+    <ClInclude Include="ServiceFunctions.hpp" />
+    <ClInclude Include="Strorage.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
