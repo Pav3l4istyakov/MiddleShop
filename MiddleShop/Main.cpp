@@ -1,7 +1,7 @@
 #include "Authorization.hpp"
 #include<fcntl.h>
 #include<io.h>
-#include<Windows.h>
+
 
 
 
@@ -10,10 +10,9 @@ int main()
 {
 	_setmode(_fileno(stdin),_O_U16TEXT);
 	_setmode(_fileno(stdout),_O_U16TEXT);
-	_beep(654, 299);
 	Start();
 
-
+	
 	/*
 	* аккаунты: супер админ, администратор, пользователь
 	* функции добавления учётки, добавления, редактирования
