@@ -144,14 +144,14 @@
     <ClCompile Include="Authorization.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ServiceFunctions.cpp" />
-    <ClCompile Include="Strorage.cpp" />
+    <ClCompile Include="Storage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Accounts.hpp" />
     <ClInclude Include="Authorization.hpp" />
     <ClInclude Include="Sellings.hpp" />
     <ClInclude Include="ServiceFunctions.hpp" />
-    <ClInclude Include="Strorage.hpp" />
+    <ClInclude Include="Storage.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

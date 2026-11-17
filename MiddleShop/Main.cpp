@@ -1,6 +1,7 @@
 #include "Authorization.hpp"
 #include<fcntl.h>
 #include<io.h>
+#include "Storage.hpp"
 
 
 
@@ -12,18 +13,18 @@ int main()
 	_setmode(_fileno(stdout),_O_U16TEXT);
 	Start();
 
-	
-	/*
-	* аккаунты: супер админ, администратор, пользователь
-	* функции добавления учётки, добавления, редактирования
-	* 
-	* авторизация: ввод логина и пароля, смена учётных записей
-	* 
-	* склад: база данных, редактирование склада
-	* 
-	* продажа: покупка, чеки, оплата*
-	* 
-	* служебные_функции: всяка для работы программы
-	*/
+	delete[]loginArr;
+	delete[]passArr;
+	delete[]statusArr;
+	delete[]userIdArr;
+
+	if (isStorageCreated)
+	{
+		delete[]idArr;
+		delete[]nameArr;
+		delete[]countArr;
+		delete[]priceArr;
+	}
+
 	return 0;
 }
