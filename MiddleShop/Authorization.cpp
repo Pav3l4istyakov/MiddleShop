@@ -60,6 +60,7 @@ void Start()
 						std::wcout << L"\nВаш уровень доступа<<" << loginArr[i] << L"\n";
 						currentId = userIdArr[i];
 						currentStatus = statusArr[i];
+						Sleep(1500);
 						return true;
 					}
 					std::wcout << L"Неверный логин или пароль. Повторите попытку.\n\n";
@@ -105,12 +106,12 @@ void Start()
 
 			if (choose == L"4")
 			{
-
+				RemoveProduct();
 			}
 
 			if (choose == L"5")
 			{
-
+				ChangePrice();
 			}
 
 			if (choose == L"6")
