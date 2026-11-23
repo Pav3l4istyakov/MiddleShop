@@ -22,7 +22,7 @@ bool IsNumber(std::wstring& str)
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 bool IsNotSameName(const std::wstring& chooseName, std::wstring* nameArr, size_t commonSize)
 {

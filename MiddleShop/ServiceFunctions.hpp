@@ -8,7 +8,7 @@
 void Getline(std::wstring& str);
 bool IsNumber(std::wstring& str);
 bool IsNotSameName(const std::wstring& chooseName,std::wstring* nameArr, size_t commonSize);
-__forceinline void Err();
+void Err();
 
 
 template <class ArrType>

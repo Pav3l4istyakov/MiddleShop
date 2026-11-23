@@ -131,7 +131,7 @@ void Start()
 
 			if (choose == L"0")
 			{
-
+				return;
 			}
 			else
 			{
