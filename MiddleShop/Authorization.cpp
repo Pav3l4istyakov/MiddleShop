@@ -116,11 +116,12 @@ void Start()
 
 			if (choose == L"6")
 			{
-
+				ChangeStorage();
 			}
 
 			if (choose == L"7")
 			{
+
 
 			}
 
