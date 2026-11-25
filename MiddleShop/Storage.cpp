@@ -236,7 +236,7 @@ void ChangeStorage()
 		}
 		else if (choose == L"4")
 		{
-
+			void ChangeStorageLimits()
 		}
 		else if (choose == L"0")
 		{
@@ -510,7 +510,8 @@ void DeleteProduct()
 						 
 						}
 						//;)
-						
+						std::wcout << "\n\nТовар успешно удалён\n";
+						Sleep(1600)
 
 					}
 					else
@@ -521,6 +522,12 @@ void DeleteProduct()
 			}
 		}
 	}
+}
+
+void ChangeStorageLimits()
+{
+	std::wcout << L"\n\nВ процессе разработки\n\n";
+	Sleep(1500);
 }
 
 
@@ -613,6 +620,9 @@ void AddProduct()
 								std::wcout << L"\n\nТовар успешно добавлен\n";
 								Sleep(1600);
 								break;
+
+
+
 
 							}
 							else if (choose == L"2")
