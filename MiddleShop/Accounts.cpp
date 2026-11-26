@@ -8,6 +8,9 @@ std::wstring* passArr = new std::wstring[userSize]{ L"admin", L"User1", L"user2"
 
 std::wstring* statusArr = new std::wstring[userSize]{ L"SuperAdmin", L"Admin", L"User", };
 unsigned int* userIdArr = new unsigned int[userSize] {0, 1, 2};
+double* fineArr = new double[userSize] {};
+double* awardArr = new double[userSize] {};
+
 size_t maxLogin = 12;
 size_t minLogin = 5;
 size_t maxPass = 16;
@@ -15,7 +18,7 @@ size_t minPass = 8;
 
  std::unordered_set<wchar_t> loginSymbols;
  std::unordered_set<wchar_t> PassSymbols;
-extern bool isSetCreated = false;
+bool isSetCreated = false;
 void ChangeAccounts()
 {
 	std::wstring choose;
@@ -99,7 +102,28 @@ void CreateNewAccount()
 				Sleep(1500);
 				return;
 			}
-			if (true)
+			if (CheckLogin(chooseLogin))
+			{
+				break;
+			}
+			else
+			{
+				Err();
+			}
+		}
+		
+		while (true)
+		{
+			system("cls");
+			std::wcout << L"Введите пароль нового пользователя или \"exit для выхода";
+			Getline(choosePass);
+			if (choosePass == L"exit" || choosePass == L"Exit")
+			{
+				std::wcout << L"Отмена создания учётной записи\n\n";
+				Sleep(1500);
+				return;
+			}
+			if (CheckPass(choosePass))
 			{
 				break;
 			}
@@ -109,29 +133,51 @@ void CreateNewAccount()
 			}
 		}
 
-	}
+		while (true)
+		{
+			system("cls");
+			std::wcout << L"Введите роль нового пользователя или \"exit для выхода\n";
+			std::wcout << L"1 - Сотрудник\n";
+			std::wcout << L"2 - Администратор\n";
+			std::wcout << L"Ввод: ";
+			Getline(choose);
+			if (choose == L"exit" || choose == L"Exit")
+			{
+				std::wcout << L"Отмена создания учётной записи\n\n";
+				Sleep(1500);
+				return;
+			}
+			
+			if (choose == L"1")
+			{
+				chooseStatus == L"User";
+				break;
+			}
+			else if (choose == L"2")
+			{
+				std::wcout << L"Введите пароль Супер Администратора для подтверждения: ";
+				Getline(choose);
+				if (choose == passArr[0])
+				{
+					chooseStatus == L"Admin";
+					break;
+				}
+				else
+				{
+					Err();
+				}
+			}
+			else
+			{
+				Err();
+			}
+		}
 
-	while (true)
-	{
-		system("cls");
-		std::wcout << L"Введите пароль нового пользователя или \"exit для выхода";
-		Getline(chooseLogin);
-		if (chooseLogin == L"exit" || chooseLogin == L"Exit")
+		while (true)
 		{
-			std::wcout << L"Отмена сохдания учётной записи\n\n";
-			Sleep(1500);
-			return;
-		}
-		if (true)
-		{
-			break;
-		}
-		else
-		{
-			Err();
+
 		}
 	}
-
 }
 
 
@@ -215,24 +261,24 @@ bool CheckPass(const std::wstring& pass)
 		return false;
 	}
 	
-	}
+	
 
-//
+
 
 	int count = 0;
 	for (size_t i = 0; i < pass.size(); i++)
 	{
 		if (!loginSymbols.count(pass[i]))
 		{
-			std::wcout << L"Некоректные символы логина!\n";
+			std::wcout << L"Некоректные символы пароля!\n";
 			std::wcout << L"Допустимые символы: A-Z, a-z, 0-9 + спец символы\n\n";
 			Sleep(2000);
 			return false;
 		}
-		else if ((count < 3 && login[i] >= L'A' && login[i] <= L'Z') || (login[i] >= L'a' && login[i] <= L'z'))
+		/*else if ((count < 3 && pass[i] >= L'A' && login[i] <= L'Z') || (login[i] >= L'a' && login[i] <= L'z'))
 		{
 			count++;
-		}
+		}*/
 	}
 	if (count >= 3)
 	{

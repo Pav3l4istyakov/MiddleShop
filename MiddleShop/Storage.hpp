@@ -1,6 +1,7 @@
 #ifndef _STORAGE_HPP_
 #define _STORAGE_HPP_
-#include "ServiceFunctions.hpp"
+
+#include "Accounts.hpp"
 //размер склада
 extern size_t sizeSt;
 extern size_t* idArr;

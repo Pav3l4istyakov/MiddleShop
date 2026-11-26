@@ -38,7 +38,7 @@ void ArrPushABack(ArrType* &arr, size_t arrSize)
 template <class ArrType>
 void ArrDeleteByIndex(ArrType*& arr, size_t arrSize, int index)
 {
-	ArrSize--;
+	arrSize--;
 	ArrType* temp = new ArrType[arrSize];
 	for (size_t i = 0, j =0; i < arrSize; i++,j++)
 	{

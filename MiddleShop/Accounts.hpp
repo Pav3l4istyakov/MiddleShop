@@ -5,17 +5,12 @@ extern std::wstring* loginArr;
 extern std::wstring* passArr;
 extern std::wstring* statusArr;
 extern unsigned int* userIdArr;
+extern double* fineArr;
+extern double* awardArr;
  
 extern size_t userSize;
 extern size_t currentId;
 extern std::wstring currentStatus;
-
-
-
-
- std::unordered_set<wchar_t> loginSymbols;
- std::unordered_set<wchar_t> PassSymbols;
-
 
 extern size_t maxLogin;
 extern size_t minLogin;

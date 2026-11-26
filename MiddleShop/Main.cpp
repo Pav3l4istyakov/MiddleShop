@@ -18,6 +18,8 @@ int main()
 	delete[]passArr;
 	delete[]statusArr;
 	delete[]userIdArr;
+	delete[]fineArr;
+	delete[]awardArr;
 
 
 
